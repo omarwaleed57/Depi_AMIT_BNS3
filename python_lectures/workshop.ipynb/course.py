@@ -1,0 +1,29 @@
+class Course:
+    _id_counter_ = 1
+    
+    def __init__(self,name):
+        self.course_id = course._id_counter_
+        course._id_counter_ += 1
+        self.name = name
+        self.enrolled_students = []
+        
+        
+    def __str__(self):
+        return f"Course Id: {self.course_id}, Course Name: {self.name}, Enrolled: {len(self.enrolled_students)}"   
+    
+    def __repr__(self):
+        return f"Course Id: {self.course_id}, Course Name: {self.name}, Enrolled: {len(self.enrolled_students)}"   
+    
+    def enrolled_students(self,student):
+        if student not in self.enrolled_students:
+            self.enrolled_students.append(student)
+            print("student enrolled succeful")
+        else :
+            print("Student already enrolled")
+        
+    def remove_student(self,student):
+        for course in self.course.enrolled_students:
+            course.enrolled_students.remove(student)
+    
+    
+    
